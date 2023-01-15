@@ -1,0 +1,119 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetAllPets" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="linksTable" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="url" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1589,1001</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="64">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="476,558" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Disponibili Archives - SIRIUS ANIMAL RESCUE" sap:VirtualizedContainerService.HintSize="434,466" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="79e5c051-60e2-4768-9d83-edf90e056f70" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[linksTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Link'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h3' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="79e5c051-60e2-4768-9d83-edf90e056f70" Timeout="5" Version="V1">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://www.siriusanimalrescue.ro/adopta-ro/catei/disponibili/" DesignTimeRectangle="227, 869, 233, 55" ElementType="Text" FriendlyName="'Articole mai vechi'" FullSelectorArgument="&lt;webctrl aaname='Articole mai vechi' parentid='graduate' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Articole mai vechi' parentid='graduate' tag='A' type='' check:text='Articole mai vechi' /&gt;" Guid="e08c1907-fac0-4679-87db-0e26c7a9f930" ImageBase64="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" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Disponibili Archives - SIRIUS ANIMAL RESCUE' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="227, -4125, 1463, 4894" FriendlyName="'Posted by'" FullSelectorArgument="&lt;webctrl id='tab-2' tag='DIV' /&gt;" Guid="1997b8c1-6f5f-41af-ade0-2638544addbc" InformativeScreenshot="3ed9165b3933c2a7f73c48676ba53002.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Disponibili Archives - SIRIUS ANIMAL RESCUE' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="486, 1431, 1938, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAx7SURBVGhDxZkJcFRVFoZbicKoDGHRREhCZ+/0ku7OvnY2EhK2RGtUXBNLHRFRXKtwDVMOoggmRiDIGkRmcXDAZZxhBGMNYYki0ZoSkFGbJQERkibR0cQk98w5d3n9Oj4SQWfmVv31n3Puff2+c+97nQRMP8cYGTQseGbomKqn4sJr1jmiN+/NSvR+luvynSxMgZOFqfCZx+37INPu3ZwU3/hUbHjN5MuDK8JGXGyWl/9/BkHfGR4yd7MrrlGBCtfFBSoX+rIgWQrj/CS2LcXScm3I2Mr/aTME/rB5fPW/cp0dJwuSGQdDmAAncIKUoKqmchEnw4k8N/syHxtC1cZPXPdfb+Rh85UIrh4NAaGBoXgtjwDFTp/AmENSLEFFnMRzIRWTJ8FDE0Or5e1+vkE7sz3F1sJ3j+8gwQS6Bip3VQEpcC3PU/UkOO5xYYPoXG6ekzen27w/22lcGzKu8lCO0+ffySQBpIHqYaUUlMfN9JBaPZdAKUZoDu5XG59zw/4sh69k7KgKiXF+g45TwSowtZsEJxwBySUgh5Q7KVyAElgbQfLYiY2hK2iPi8dCKkbPdcED4SHn90g9GBFard9dP4wuJgB0tWs8liB8Tsb6WluOExtBOHIEJG+VMXlrti4Wjk1ccW5N0FebOuZBj126ABQ7xmMCUk41BSTrHEzVEZgg/RLQSsdIWYns2pDRlRJv8EEvz4FMRwcHpGPHm/Jjp1wnbRel481ETGDoCrI1O1HsJDlBKR8gDjog5soW+me6tSNs+EVDv9jN6VZvwC4SEMUSSO88VoB6abs4MJeAWQ6mAVIsIY9mUpyIsZA+P5ppZ287Y1skpvGgF0bbRZIOPBDQD8NlsKsEp1wAEohyBELwo7oaAYqc5vwu5OA6gmvuCw+ZL3EDx8XjLjE/d3++fzcRCj9EvVASyB/THHclBGotzYbONfXQve8D6D3eBtro7QLWuRf6Dy+GvpYZ0NecgkqG3j1JrG9PssjJVYxzfdocjzWdfifRF3zZsGCJ7R/mWUkNnoYK2DclVcLq4DigBJa7pN/VE78q5dA/drCv3sRGpkkoN+vd42K9u10ILEGbeR0bpJqbx6Im8iduCw08hYvHXmJO+t3VkIy667clGhgdcyC0EB01Fx6pr/ZZ6O/qkmhiHPcxeOujHljV2A0rUe8d/B4OneiTs3L0deGJLEIgF4I6uQtYlaN2U00IG0Ql8vrpv9sDT2GMJ6LKtbGcuTdWQNLGq+Dta9IloHhOA55FelYxpufxzOrlkkaMN1t6YFbDN5BafQbS5ndyT50vhXF57de45nu5Woz+Y/UKDPp2OzFGx7ifwGWM82Julx2bojgR7r1u3FyJbzJZFhS0uF4pZwRPjdyyqFTASugjGQSNrpTpgI7aZyQC7Xg/3LlOgKdI4BSKpXidXDZFa+kaNfAkOJSQAx8nh4RFR5HzGGu9u228vm2ZuZHD0+Pj3DCDObEB9ysV4EKRL70zmx3JsDHcaQ5M8WGZt1aUMPXYEMj0mq4A4OQn/dJqunkSXaM1gS95375ShLSx3l0EaMfYjsD+uG8XuQ1l1WrBl14YbPplcki5a0M5DFT2mhnwicfBDqcTODVhB/LD6Vb29VtbxI1x/Hrt1wjq00nAJgXUfP4c51R+B16rBut8X0IjIBfB2jBPoBwbwJycmuC5FW4pG1VlGn+Drcb58gwQKudODSS+PJ09c0+uBu1Nt4E3wwatV5XIWwK8gc88gRhLNGEs/9wb+3rkp+F7/X6GBieUoDk2gm7BZii2cC2594paU/S8zMbE9TPAsX460zfhWD+NUb252AUcXqr9+YXydgBTl3SC+wmfXwgUkJ9NunW3606h/+hSCY2AO+MZqY+Euazp5izw2sKwLaaExUXexPXTwUiOhmns+gVFzJuawL5AedOs8N2H7/ObHcSvRRcCkAhExYOrw6Dm094FdqaZAyK00K54Dt3bFEuNYC0O81iEpzwOPt8U6TXZG6ayxAYERjm4pvGY6hRT7Y1yN2/gC2xAvbzv7v8enAjE9bh0CShcX9PX0Wk9Sq15XT1G3a0IGMdB+3bG6lyotymGYTPc+3bGwKm/RvpMjnXTwL4OYdHPpqK6UvgixcI+T45n4k4A9e9+B4kIoaRgA2oGsYLX15dv/1Z+Kr4HTTEEiIrmkEq9TVGsrymaz/Maxegm27opzI6QgZoK9rUojG1rpzArqva2DPg82aI1QDdVEHo5Bsl/MPfgAbDf3ADFM++Gq2+6FWzpuVxXX5XOKm9Ig4an8Qfm63gKTVFCO6OpEejdEYnNoWNsSlg62WddW8ZsBIyimNy2ZgrPqW5dU8bS6kvh42wr/pLWyhvYsq8bHI91gP2xdu4Ex10fD3C11vbAAbBVVGvAQ+mRu5OwETyFHWY8hUgER+0wY1ORYIpZlO8lSFICgmrg6EpUJ82bmw3f7m3mDbThi0dAQgLOWIFztjv+ArbsUkPQwZSRlw1bl+NXKIL37ohgpM9eneA1hd2dtNm6egrusoC1ri4LiBNWlzISr+O6vZtW8gZoVK3uBBtB0a5yH0K3vmoIdy7atISaiIDef4SzbXUhjabQmdYaASdgeTMyJ1lWTcYGyEsZaWZNucQH2PxhD1gfbQcrwnFhTKC8NlBVPx1eaety/GrdEQ5L5oyqNY3KnFBFkBx0VSmQeDOrlERNSOTNxz+WLQBUruqCBARUItiER09r4Lx+/36wDvHYWNNyDGMjZeRlwZEtZpiRM6LcNOwXQcEcbmUpxK8s4U1YeIxNoetFNVpT9PtK6Or5hjfQ2tEPkxb5wILQBG55RLg/xgbKnzAEUSJgR2YeJKRmc1E8VBPzZjuZOWSY+CM//MHURsvKyRJ0MsS/VILwmL+kaqLOc1lbsKueN0CDmrhlVScH/oFw940AlAjUnu6BSEcyuHOLuCi2Z3iGbOKi4cNFA8FFEXPjEUwpbkUx8+clAXU+t0LUXty7QbYgxp/3dkPhsx0Qh+DxKHLLjWsNb65EoGYEvufhR6Ht+AloRc15aB6v0ZzRNUpjQsffxxu4cERQcExNgS8W4UgcUEKSx0nRHLm+RifR1S0eJzUOtPXBO5/0QN07/4ZJ1802vLmSJSULXDmFcOp0u7wa4ORXX4EzKx8s+DgZXaNkTnC8xxugMWZaVLWCiqtH2PpJLK6+GGMU1mJkHrMcXeaxcj7vlRvZawe3ytsHjuKKawxvrkQNuLGB9g6fvALgdAf+noQ1mjO6RinK7vb/OxGdQtTi/A4FFrscRc7jSQE5QWs5zck8f8NNsKCpHva0fQTHur7kMEY3JtHzTXJmF0BYghNunX0vHPj0EOw/+ClUzroHwhNcfE6tM/oMksQXY/TUqGrcYQ4TvbyIaeDclUQevYzm+YloMdVjlglRjdzopnpF2NyQXTwVbp9zP6xYux5WrGmA2+bcB1lYozmx7kc2QCN8XnqLglBS8DHLiqT08wNzfa0IrIXGN6YXNNqZCtVPL4LT7R38tPTjVHs7PP7UQojCNWd7maPt7o8ktn8EjRlhjnzO44teWgRKBKL3qKWFTHgBo5hgyYUK+JySZXouM7p5fHImpOZPhp4e8bcAY9ovulrc3d0NKfnFfK3RZwS8xPoxMi20KvLFAkYSIIVSGL+ITsI8Ct2/RsxRrtXRY2fnGd6coDKKyuDIsVY409nJ1Yl/LJFUfrS1FTImlZ21Ae1r1GiMKYuaTyBGiqzL1yC1el3BD9aRohcWGN5cvZiZk6bw591ImQivXztQ2g+ys43gMnM1B0OZETpSOongePwCxnXUVAGXNi9z8viZxs8wgdHuxqHI9VK1s8FPiIprkJiDj0vs4yoinsnxIagGGflCAUx8IQ/h8xjFqhaJa6hOopyu4esWeJg1JxBgsK/GgRq41pKceWbI3dePoNEjzGFPpns5YC0C1UrHnENiPLHWgxJzmrR5D7uxWn0l/nSNHD32/P73clTpxGoFFoFQ5to8DhpRQ7FwFU+sEXOk7GUZcPhvo2HTonBDoHNR8LiQKolzfoNOY+z18esIlCD1Cl+SyxsIr8nlcxjz+qo/4p+B24ez3u0jYGtdKKR7jL9VBhM9Nue980aDGrksNbTqyoeSWwicAz/v0SRqHshamkHwfm0bDodfHcnmzbIYghqJXthzeubPdVAz9LIHV0TVXH6Xo3H842leaiJscQ77w58mwKnXg3yHNgZ5N/0maPPiu4bV3Dz5gsrgSy8IJij6LqcfSPRTVQFTTDWaGxzcZPoPwJdKm8L5s7QAAAAASUVORK5CYII=" InformativeScreenshot="8e05fd10c5f0500e5f7d58654724e303.png" Selector="&lt;html app='chrome.exe' title='Disponibili Archives - SIRIUS ANIMAL RESCUE'/&gt;" Url="[url]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
