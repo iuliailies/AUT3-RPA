@@ -8520,15 +8520,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alina\\.nuget\\packages\\": {}
+    "C:\\Users\\GeorgeRadu\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "RoboticEnterpriseFramework",
       "projectName": "RoboticEnterpriseFramework",
-      "projectPath": "C:\\Users\\Alina\\Desktop\\info_ubb\\An 3\\Sem 1\\rpa\\RoboticEnterpriseFramework\\.local",
-      "packagesPath": "C:\\Users\\Alina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alina\\Desktop\\info_ubb\\An 3\\Sem 1\\rpa\\RoboticEnterpriseFramework\\.local"
+      "projectPath": "C:\\Users\\GeorgeRadu\\UBB RPA Mentorship\\Project AUT3\\AUT3-RPA\\EmailAutomation\\.local",
+      "packagesPath": "C:\\Users\\GeorgeRadu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\GeorgeRadu\\UBB RPA Mentorship\\Project AUT3\\AUT3-RPA\\EmailAutomation\\.local"
     },
     "frameworks": {
       "net461": {
@@ -8564,7 +8564,7 @@
             "version": "[21.10.6, 21.10.6]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Alina\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {

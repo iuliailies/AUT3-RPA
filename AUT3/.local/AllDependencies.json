@@ -7564,15 +7564,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Iulia\\.nuget\\packages\\": {}
+    "C:\\Users\\GeorgeRadu\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "AUT3",
       "projectName": "AUT3",
-      "projectPath": "C:\\Users\\Iulia\\OneDrive\\Documents\\UiPath\\AUT3\\.local",
-      "packagesPath": "C:\\Users\\Iulia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Iulia\\OneDrive\\Documents\\UiPath\\AUT3\\.local"
+      "projectPath": "C:\\Users\\GeorgeRadu\\UBB RPA Mentorship\\Project AUT3\\AUT3-RPA\\AUT3\\.local",
+      "packagesPath": "C:\\Users\\GeorgeRadu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\GeorgeRadu\\UBB RPA Mentorship\\Project AUT3\\AUT3-RPA\\AUT3\\.local"
     },
     "frameworks": {
       "net461": {
