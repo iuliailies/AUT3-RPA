@@ -80,6 +80,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Ivy - SIRIUS ANIMAL RESCUE" sap:VirtualizedContainerService.HintSize="434,971" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="29dbbf6b-6da2-4811-9f15-105b7fdb1e60" Version="V1">
@@ -114,34 +115,34 @@
           <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[description]" />
           <Assign DisplayName="Assign Age" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_4">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:Object">[row.Item(2)]</OutArgument>
+              <OutArgument x:TypeArguments="x:Object">[row.Item("Age")]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(description, "(?&lt;=(Varsta|DOB|DN): ?[a-z ()]*)((\d{2,4}\.?){3}|\d+ ?[a-z]*)").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(description, "(?&lt;=(Varsta|DOB|DN): ?[a-z ()]*)((\d{2,4}\.?){3}|\d+(.\d)? ?[a-z]*)").ToString]</InArgument>
             </Assign.Value>
           </Assign>
           <Assign DisplayName="Assign Gender" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_5">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:Object">[row.Item(3)]</OutArgument>
+              <OutArgument x:TypeArguments="x:Object">[row.Item("Gender")]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(description, "(?&lt;=Sex: ?)[a-z]*").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(description, "(?&lt;=Sex: ?)[a-z]+").ToString]</InArgument>
             </Assign.Value>
           </Assign>
           <Assign DisplayName="Assign Breed" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_6">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:Object">[row.Item(4)]</OutArgument>
+              <OutArgument x:TypeArguments="x:Object">[row.Item("Breed")]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(description, "(?&lt;=Rasa: ?)[a-z]+").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:Object">[System.Text.RegularExpressions.Regex.Match(description, "(?&lt;=Rasa: ?)[a-z]+").ToString]</InArgument>
             </Assign.Value>
           </Assign>
           <Assign DisplayName="Assign Size" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_7">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:Object">[row.Item(5)]</OutArgument>
+              <OutArgument x:TypeArguments="x:Object">[row.Item("Size")]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(description, "(?&lt;=Talie: ?)(\d+-\d+|[a-z]+)").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(description, "(?&lt;=Talie.*: ?)(\d+-\d+|\d+|[a-z]+)").ToString]</InArgument>
             </Assign.Value>
           </Assign>
         </Sequence>

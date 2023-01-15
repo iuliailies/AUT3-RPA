@@ -8520,15 +8520,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\GeorgeRadu\\.nuget\\packages\\": {}
+    "C:\\Users\\Iulia\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "RoboticEnterpriseFramework",
       "projectName": "RoboticEnterpriseFramework",
-      "projectPath": "C:\\Users\\GeorgeRadu\\UBB RPA Mentorship\\Project AUT3\\AUT3-RPA\\EmailAutomation\\.local",
-      "packagesPath": "C:\\Users\\GeorgeRadu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\GeorgeRadu\\UBB RPA Mentorship\\Project AUT3\\AUT3-RPA\\EmailAutomation\\.local"
+      "projectPath": "C:\\Users\\Iulia\\OneDrive\\Documents\\UiPath\\project\\AUT3-RPA\\EmailAutomation\\.local",
+      "packagesPath": "C:\\Users\\Iulia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Iulia\\OneDrive\\Documents\\UiPath\\project\\AUT3-RPA\\EmailAutomation\\.local"
     },
     "frameworks": {
       "net461": {
